@@ -7,7 +7,7 @@ spec:
   - name: webcontainer
     image: nginx
     ports:
-      - containerPort: 80
+    - containerPort: 80
     volumeMounts:
     - name: sharedvolume
       mountPath: /usr/share/nginx/html

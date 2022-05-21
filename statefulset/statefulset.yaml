@@ -5,7 +5,7 @@ metadata:
     app: cassandra
   name: cassandra
 spec:
-  clusterIP: None
+  clusterIP: None #headless service
   ports:
   - port: 9042
   selector:
@@ -88,7 +88,7 @@ spec:
         volumeMounts:
         - name: cassandra-data
           mountPath: /cassandra_data
-  volumeClaimTemplates:
+  volumeClaimTemplates:  # polara tek tek Volume baglayacak, bu PVC templateegore
   - metadata:
       name: cassandra-data
     spec:
