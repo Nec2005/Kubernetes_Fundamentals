@@ -5,7 +5,7 @@ metadata:
     app: cassandra
   name: cassandra
 spec:
-  clusterIP: None #headless service
+  clusterIP: None #headless service,ClusterIP tipinde service olusacak IP atanmayacak, bu serice gidince altindaki podlardan bir tanesinin IP adresini donecek, her bir poda podismi.service-ismi seklinde ersilebilecek   
   ports:
   - port: 9042
   selector:
